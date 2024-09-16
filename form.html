@@ -17,6 +17,7 @@
             flex-direction: column;
             min-height: 100vh;
             color: #fff;
+            position: relative;
         }
 
         .content {
@@ -96,10 +97,30 @@
             width: 100%;
             color: #fff;
         }
+
+        /* Home button styles */
+        .home-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: magenta;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .home-button:hover {
+            background-color: darkmagenta;
+        }
     </style>
 </head>
 
 <body>
+    <button class="home-button" onclick="window.location.href='index.html'">Home</button>
+    
     <div class="content">
         <div class="contact-container">
             <h1>Contact Us</h1>
@@ -121,6 +142,11 @@
     <!-- Footer Section -->
     <div class="footer">
         <p>Powered By Mr Dilla ©</p>
+    </div>
+</body>
+
+</html>
+
     </div>
 </body>
 
