@@ -6,96 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form - Mr Dilla</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('res/bg.jpg');
-            background-size: cover;
-            background-position: center;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            color: #fff;
-        }
-
-        .content {
-            flex: 1;
-            /* Allows the content area to expand and push the footer to the bottom */
-            display: flex;
-            justify-content: center;
-            /* Horizontally centers the container */
-            align-items: center;
-            /* Vertically centers the container */
-        }
-
-        .contact-container {
-            width: 400px;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            text-align: center;
-            max-height: 500px;
-            overflow-y: auto;
-        }
-
-        h1 {
-            margin-bottom: 15px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* Centers the form elements */
-        }
-
-        label {
-            margin-top: 10px;
-            text-align: center;
-            /* Centers the text within the label */
-            width: 100%;
-            /* Ensure labels take up full width of container */
-        }
-
-        input,
-        textarea {
-            padding: 10px;
-            margin-top: 5px;
-            border: none;
-            border-radius: 5px;
-            width: 100%;
-            /* Full width of the container */
-        }
-
-        textarea {
-            height: 100px;
-            resize: none;
-        }
-
-        button {
-            padding: 10px;
-            margin-top: 15px;
-            background-color: magenta;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: #fff;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: darkmagenta;
-        }
-
-        /* Footer styles */
-        .footer {
-            background-color: rgba(0, 0, 0, 0.7);
-            text-align: center;
-            padding: 10px;
-            width: 100%;
-            color: #fff;
-        }
+        /* Your existing styles */
     </style>
 </head>
 
@@ -103,7 +14,7 @@
     <div class="content">
         <div class="contact-container">
             <h1>Contact Us</h1>
-            <form action="form.php" method="POST">
+            <form action="https://formspree.io/f/your-form-id" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -125,3 +36,4 @@
 </body>
 
 </html>
+
