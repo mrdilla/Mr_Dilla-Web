@@ -1,12 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="res/dilla.jpg" type="image/jpeg">
     <title>Mr Dilla</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('res/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            position: relative;
+            /* Changed to relative */
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            align-items: center;
+        }
+
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            background-color: #000000;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 2px solid rgb(255, 255, 255);
+            transition: background-color 0.3s ease;
+        }
+
+        header nav a:hover {
+            background-color: #414141;
+        }
+
+        /* Dropdown menu */
+        .dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            /* Increase the right margin */
+        }
+
+        .dropdown-content {
+            text-align: center;
+            display: none;
+            position: absolute;
+            top: 100%;
+            /* Show dropdown below the button */
+            left: 50%;
+            transform: translateX(-50%);
+            /* Center dropdown menu */
+            background-color: #000000;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            width: 140px;
+            /* Width based on content */
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #414141;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Centering the main content */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 0px 20px 20px;
+            /* Added top padding to avoid overlap with header */
+            flex: 1;
+            /* Allows main to take up remaining space */
+        }
+
+        /* Styling the logo */
+        .logo-circle {
+            width: 150px;
+            /* Adjust size as needed */
+            height: 150px;
+            /* Ensure it’s a circle */
+            border-radius: 50%;
+            /* Make it circular */
+            object-fit: cover;
+            /* Cover the image within the circle */
+            margin-bottom: 20px;
+            /* Space between logo and text */
+        }
+
+        /* Additional styles for heading and paragraph */
+        h1 {
+            font-size: 40px;
+            color: rgb(255, 255, 255);
+            /* Adjust font size as needed */
+            margin: 10px 0;
+            /* Space above and below */
+        }
+
+        p {
+            font-size: 16px;
+            color: rgb(157, 255, 0);
+            /* Adjust font size as needed */
+            max-width: 600px;
+            /* Limit the width for readability */
+        }
+
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -15,12 +163,12 @@
             Mr Dilla
         </div>
         <nav>
-            <a href="index.html">Home</a>
             <div class="dropdown">
                 <a href="#">Projects</a>
                 <div class="dropdown-content">
                     <a href="https://chuti-yakshani-md.netlify.app/">Chuti yakshani Md</a>
-                    <a href="#">Comming soon</a>
+                    <a href="https://github.com/mrdilla/Wa_Bot_Base">WA Bot Base</a>
+                    <a href="https://github.com/mrdilla/Session-Code-Generator">Get WA Pairing code </a>
                 </div>
             </div>
             <div class="dropdown">
@@ -35,7 +183,12 @@
 
     <!-- Main content -->
     <main>
-        <!-- Your main content goes here -->
+        <div class="content">
+            <img src="res/dilla.jpg" alt="Mr Dilla Logo" class="logo-circle">
+            <h1>Welcome To The <br> Official Website Of <br> Mr Dilla</h1>
+            <p><b>Your small description about yourself goes here. You can share your interests, skills, or anything you'd
+                like visitors to know about you.</b></p>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -44,5 +197,5 @@
     </footer>
 
 </body>
-</html>
 
+</html>
