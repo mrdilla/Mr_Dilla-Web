@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <title>FF Player Info By Mr.Dilla_ </title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <img src="assets/logo.png" alt="Garena logo" >
+    <h2>Get FF Account Information</h2>
+    <form id="accountForm">
+      <label>Select Region:</label>
+        <div class="regions">
+          <label class="region-option"><input type="radio" name="region" value="sg" /> Singapore</label>
+          <label class="region-option"><input type="radio" name="region" value="ind" /> Indonesia</label>
+          <label class="region-option"><input type="radio" name="region" value="br" /> Brazil</label>
+          <label class="region-option"><input type="radio" name="region" value="ru" /> Russia</label>
+          <label class="region-option"><input type="radio" name="region" value="id" /> Indonesia</label>
+          <label class="region-option"><input type="radio" name="region" value="tw" /> Taiwan</label>
+          <label class="region-option"><input type="radio" name="region" value="us" /> United States</label>
+          <label class="region-option"><input type="radio" name="region" value="vn" /> Vietnam</label>
+          <label class="region-option"><input type="radio" name="region" value="th" /> Thailand</label>
+          <label class="region-option"><input type="radio" name="region" value="me" /> Middle East</label>
+          <label class="region-option"><input type="radio" name="region" value="pk" /> Pakistan</label>
+          <label class="region-option"><input type="radio" name="region" value="eu" /> Europe</label>
+          <label class="region-option"><input type="radio" name="region" value="sac" /> south America</label>
+          <label class="region-option"><input type="radio" name="region" value="na" /> North America</label>
+          <label class="region-option"><input type="radio" name="region" value="bd" /> Bangladesh</label>
+        </div>
+     <div> <label for="uid">Your User ID:</label>
+     <div><input type="number" id="uid" placeholder="Enter User ID" required /></div>
+
+      <button type="button" onclick="fetchAccountInfo()">Get Info</button>
+    </form>
+
+    <div id="result" class="account-info"></div>
+  </div>
+
+</body>
+
+</html>

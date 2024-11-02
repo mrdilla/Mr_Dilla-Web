@@ -1,0 +1,155 @@
+/* styles.css */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffea00;
+    font-size: 25px;
+}
+
+.container {
+    width: 100%; /* Allow responsive width */
+    max-width: 600px; /* Maintain fixed maximum width */
+    padding: 20px;
+    background: transparent;
+    text-align: center; /* Center text inside the container */
+    margin: auto; /* Center container */
+}
+
+h2 {
+    font-size: 24px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #000;
+}
+
+.regions {
+    display: grid;
+    grid-template-columns: repeat(3, 200px); /* Fixed width of 200px for each column */
+    gap: 8px; /* Space between grid items */
+    margin: 20px 0; /* Margin around the grid */
+    text-align: left; /* Align text to the left inside grid items */
+    justify-items: start; /* Align grid items to the left */
+}
+/* Responsive adjustments for regions grid */
+@media (max-width: 600px) {
+    .regions {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on small screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .regions {
+        grid-template-columns: 1fr; /* One column on very small screens */
+    }
+}
+
+.region-option {
+    font-size: 14px;
+    color: #000;
+}
+
+.region-option input {
+    margin-right: 5px;
+}
+
+#uid {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 14px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:active {
+    background-color: #444; /* Darker shade when pressed */
+}
+
+button:focus {
+    outline: 2px solid #ff4500; /* Outline on focus */
+}
+
+.account-info {
+    margin-top: 20px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    min-height: 50px;
+    color: #333;
+    text-align: left;
+}
+
+/* Title styling */
+.container h2 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Logo and header styling */
+.container img {
+    margin-bottom: 10px;
+    width: 60px;
+}
+
+.container h3 {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+input::placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+/* For WebKit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555; /* Scrollbar color */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777; /* Hover state */
+}
+
