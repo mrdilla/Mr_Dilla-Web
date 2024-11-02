@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy Options</title>
+    <link rel="icon" href="res/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('res/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Kanit', sans-serif;
+            position: relative;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: #FFF;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-align: center;
+            font-family: 'Kanit', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border: 2px solid #ffffff;
+        }
+
+        .home-button:hover {
+            background-color: #000000;
+
+        }
+
+        .header1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(81, 255, 0);
+            font-size: 22px;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .translucent-box {
+            background-color: rgba(255, 255, 255, 0.6);
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button {
+            color: #000000;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 8px;
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            height: auto;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-family: 'Kanit', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .button:hover {
+            color: #ffffff;
+        }
+
+        .heroku {
+            background-color: #ffffff;
+            border: 2px solid #6001D2;
+        }
+
+        .heroku:hover {
+            background-color: #6001D2;
+        }
+
+        .replit {
+            background-color: #ffffff;
+            border: 2px solid #f33100;
+        }
+
+        .replit:hover {
+            background-color: #f33100;
+        }
+
+        .clever {
+            background-color: #ffffff;
+            border: 2px solid #0018ee;
+        }
+
+        .clever:hover {
+            background-color: #0018ee;
+        }
+
+        .termux {
+            background-color: #ffffff;
+            border: 2px solid #000000;
+        }
+
+        .termux:hover {
+            background-color: #000000;
+        }
+
+        .railway {
+            background-color: #ffffff;
+            border: 2px solid #333;
+        }
+
+        .railway:hover {
+            background-color: #333;
+        }
+
+        .koyeb {
+            background-color: #ffffff;
+            border: 2px solid #1565C0;
+        }
+
+        .koyeb:hover {
+            background-color: #1565C0;
+        }
+
+        .codespace {
+            background-color: #ffffff;
+            border: 2px solid #000000;
+        }
+
+        .codespace:hover {
+            background-color: #000000;
+        }
+
+        .vps {
+            background-color: #ffffff;
+            border: 2px solid #e6d600;
+        }
+
+        .vps:hover {
+            background-color: #e6d600;
+        }
+
+        .footer {
+            background-color: #888686;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="home-button">Home</a>
+    <div class="header1">
+        <h1>Deploy Options</h1>
+    </div>
+    <div class="main-content">
+        <div class="translucent-box">
+            <a href="https://dashboard.heroku.com/new?button-url=https://github.com/MrDillaOfficial/Chuti_Yakshani-MD&template=https://github.com/MrDillaOfficial/Chuti_Yakshani-MD.git" class="button heroku">
+                <img src="res/heroku.png" alt="Heroku"> Heroku
+            </a>
+            <a href="replit.html" class="button replit">
+                <img src="res/replit.png" alt="Replit"> Replit
+            </a>
+            <a href="clever.html" class="button clever">
+                <img src="res/clever.png" alt="Clever"> Clever
+            </a>
+            <a href="termux.html" class="button termux">
+                <img src="res/termux.png" alt="Termux"> Termux
+            </a>
+            <a href="railway.html" class="button railway">
+                <img src="res/railway.png" alt="Railway"> Railway
+            </a>
+            <a href="koyeb.html" class="button koyeb">
+                <img src="res/koyeb.png" alt="Koyeb"> Koyeb
+            </a>
+            <a href="codespace.html" class="button codespace">
+                <img src="res/github.png" alt="Codespace"> Codespace
+            </a>
+            <a href="vps.html" class="button vps">
+                <img src="res/vps.png" alt="VPS"> VPS
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <h3><b>Powered By Mr Dilla ©</b></h3>
+    </div>
+</body>
+
+</html>
+

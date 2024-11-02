@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRABATH-MD DEPLOY ON VPS</title>
+    <link rel="icon" href="res/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('res/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Kanit', sans-serif;
+            position: relative;
+        }
+
+        .home-button, .back-button {
+            position: absolute;
+            top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-family: 'Kanit', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .home-button {
+            left: 10px;
+            background-color: #333;
+            color: #FFF;
+            border: 2px solid #ffffff;
+        }
+
+        .home-button:hover {
+            background-color: #000000;
+        }
+
+        .back-button {
+            right: 10px;
+            background-color: #333;
+            color: #FFF;
+            border: 2px solid #ffffff;
+        }
+
+        .back-button:hover {
+            background-color: #000000;
+        }
+
+        .header1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(81, 255, 0);
+            font-size: 22px;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .translucent-box {
+            background-color: rgba(255, 255, 255, 0.6);
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .command-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            overflow-wrap: break-word;
+        }
+
+        .command {
+            font-family: monospace;
+            color: #333;
+            white-space: pre-wrap;
+            margin: 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .copy-btn {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .copy-btn:hover {
+            background-color: #45a049;
+        }
+
+        .watch {
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            padding: 5px 8px;
+            cursor: pointer;
+            border-radius: 4px;
+            border: 2px solid #ff0000;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .watch:hover {
+            background-color: #ff0000;
+            color: #ffffff;
+        }
+
+        .footer {
+            background-color: #888686;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .command-box {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+                width: 90%;
+            }
+
+            .command {
+                font-size: 14px;
+            }
+
+            .copy-btn, .watch {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="home-button">Home</a>
+    <a href="deploy.html" class="back-button">Back</a>
+    <div class="header1">
+        <h1>DEPLOY ON VPS</h1>
+    </div>
+    <div class="main-content">
+        <div class="translucent-box">
+            <div class="command-box" id="cmd1">
+                <pre class="command">sudo apt update</pre>
+                <button class="copy-btn" onclick="copyToClipboard('cmd1')">Copy</button>
+                <textarea id="cmd1-text" style="position: absolute; left: -9999px;">sudo apt update</textarea>
+            </div>
+            <div class="command-box" id="cmd2">
+                <pre class="command">sudo apt install git</pre>
+                <button class="copy-btn" onclick="copyToClipboard('cmd2')">Copy</button>
+                <textarea id="cmd2-text" style="position: absolute; left: -9999px;">sudo apt install git</textarea>
+            </div>
+            <div class="command-box" id="cmd3">
+                <pre class="command">sudo apt install nodejs npm</pre>
+                <button class="copy-btn" onclick="copyToClipboard('cmd3')">Copy</button>
+                <textarea id="cmd3-text" style="position: absolute; left: -9999px;">sudo apt install nodejs npm</textarea>
+            </div>
+            <div class="command-box" id="cmd4">
+                <pre class="command">git clone https://github.com/mrdilla/Chuti-Yakshani-MD.git</pre>
+                <button class="copy-btn" onclick="copyToClipboard('cmd4')">Copy</button>
+                <textarea id="cmd4-text" style="position: absolute; left: -9999px;">git clone https://github.com/mrdilla/Chuti-Yakshani-MD.git</textarea>
+            </div>
+            <div class="command-box" id="cmd5">
+                <pre class="command">cd Chuti_Yakshani-MD</pre>
+                <button class="copy-btn" onclick="copyToClipboard('cmd5')">Copy</button>
+                <textarea id="cmd5-text" style="position: absolute; left: -9999px;">cd Chuti_Yakshani-MD</textarea>
+            </div>
+            <div class="command-box" id="cmd6">
+                <pre class="command">npm install</pre>
+                <button class="copy-btn" onclick="copyToClipboard('cmd6')">Copy</button>
+                <textarea id="cmd6-text" style="position: absolute; left: -9999px;">npm install</textarea>
+            </div>
+            <div class="command-box" id="cmd7">
+                <pre class="command">nano ~/.bash_profile</pre>
+                <button class="copy-btn" onclick="copyToClipboard('cmd7')">Copy</button>
+                <textarea id="cmd7-text" style="position: absolute; left: -9999px;">nano ~/.bash_profile</textarea>
+            </div>
+            <div class="command-box" id="cmd8">
+                <pre class="command">
+export SESSION_ID="<span contenteditable="true">enter session-id</span>"
+export GITHUB_AUTH_TOKEN="<span contenteditable="true">enter github auth token</span>"
+export GITHUB_USERNAME="<span contenteditable="true">enter github username</span>"
+export BOT_NUMBER="<span contenteditable="true">enter botnumber</span>"
+                </pre>
+                <button class="copy-btn" onclick="copyToClipboard('cmd8')">Copy</button>
+                <textarea id="cmd8-text" style="position: absolute; left: -9999px;">export SESSION_ID="<span contenteditable="true">enter session-id</span>"
+export GITHUB_AUTH_TOKEN="<span contenteditable="true">enter github auth token</span>"
+export GITHUB_USERNAME="<span contenteditable="true">enter github username</span>"
+export BOT_NUMBER="<span contenteditable="true">enter botnumber</span>"</textarea>
+            </div>
+            <div class="command-box" id="cmd9">
+                <pre class="command">source ~/.bash_profile</pre>
+                <button class="copy-btn" onclick="copyToClipboard('cmd9')">Copy</button>
+                <textarea id="cmd9-text" style="position: absolute; left: -9999px;">source ~/.bash_profile</textarea>
+            </div>
+            <div class="command-box" id="cmd10">
+                <pre class="command">npm start</pre>
+                <button class="copy-btn" onclick="copyToClipboard('cmd10')">Copy</button>
+                <textarea id="cmd10-text" style="position: absolute; left: -9999px;">npm start</textarea>
+            </div>
+            <button class="watch" onclick="openLink()">Watch</button>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Powered By Mr Dilla ©</p>
+    </div>
+
+    <script>
+        function copyToClipboard(cmdId) {
+            const textArea = document.getElementById(cmdId + '-text');
+            textArea.select();
+            document.execCommand('copy');
+        }
+
+        function openLink() {
+            window.open("https://example.com", "_blank");
+        }
+    </script>
+</body>
+
+</html>

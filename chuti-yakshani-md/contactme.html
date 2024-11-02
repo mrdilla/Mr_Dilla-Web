@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="icon" href="res/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        body {
+            background-image: url('res/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Kanit', sans-serif;
+            height: 100vh;
+            position: relative;
+        }
+
+        .header1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(81, 255, 0);
+            font-size: 22px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: #FFF;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-align: center;
+            font-family: 'Kanit', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border: 2px solid #ffffff;
+        }
+
+        .home-button:hover {
+            background-color: #000000;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .translucent-box {
+            background-color: rgba(255, 255, 255, 0.6);
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            width: 200px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            border-radius: 8px;
+            padding: 6px 12px;
+            margin: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            height: 40px;
+            transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+            font-family: 'Kanit', sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 6px;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+        }
+
+        .github { border-color: #333; }
+        .github:hover { background-color: #333; color: white; }
+
+        .youtube { border-color: #FF0000; }
+        .youtube:hover { background-color: #FF0000; color: white; }
+
+        .facebook { border-color: #4267B2; }
+        .facebook:hover { background-color: #4267B2; color: white; }
+
+        .whatsapp { border-color: #25D366; }
+        .whatsapp:hover { background-color: #25D366; color: white; }
+
+        .telegram { border-color: #0088cc; }
+        .telegram:hover { background-color: #0088cc; color: white; }
+
+
+
+        .footer {
+            background-color: #888686;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="home-button">
+        Home
+    </a>
+    <div class="header1">
+        <h1>Contact Me</h1>
+    </div>
+    <div class="main-content">
+        <div class="translucent-box">
+            <a href="https://github.com/DillaEditz" class="button github">
+                <img src="res/github.png" alt="GitHub">
+                GitHub
+            </a>
+            <a href="https://youtube.com/yourchannel" class="button youtube">
+                <img src="res/yt.png" alt="YouTube">
+                YouTube
+            </a>
+            <a href="https://facebook.com/yourprofile" class="button facebook">
+                <img src="res/fb.png" alt="Facebook">
+                Facebook
+            </a>
+            <a href="https://chat.whatsapp.com/GnrBFEjBH0BKET8MgyFoSl" class="button whatsapp">
+                <img src="res/whatsapp.png" alt="WhatsApp">
+                WhatsApp
+            </a>
+            <a href="https://t.me/mr_dilla_official" class="button telegram">
+                <img src="res/telegram.png" alt="Telegram">
+                Telegram
+            </a>
+
+        </div>
+    </div>
+    <div class="footer">
+        <h3><b>Powered By Mr Dilla ©</b></h3>
+    </div>
+</body>
+
+</html>
+
